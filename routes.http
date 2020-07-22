@@ -1,0 +1,31 @@
+### GET PROJECTS
+GET http://localhost:8000/projects
+
+### GET PROJECTS WITH ID
+GET http://localhost:8000/projects/1
+
+### POST PROJECTS
+POST http://localhost:8000/projects
+Content-Type: application/json
+
+{
+  "name": "Trott",
+  "date": "Mai 2020 - Juillet 2020",
+  "link": "",
+  "image": "Trott.png",
+  "description": "Projet 3 de la Wild Code School réalisé en collaboration avec l'entreprise Trott"
+}
+
+### GET LANGUAGES
+GET http://localhost:8000/languages
+
+### POST LANGUAGES
+POST http://localhost:8000/languages
+Content-Type: application/json
+
+{
+  "name": "Git"
+}
+
+### GET LANGUAGES WITH ID
+GET http://localhost:8000/languages/1
