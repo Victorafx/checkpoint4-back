@@ -21,6 +21,17 @@ app.get('/projects', (req, res) => {
   });
 });
 
+app.post('/projects', (req, res) => {
+  const project = req.body;
+  connection.query('INSERT INTO projects SET ?', project, (err, results) => {
+    if (err) {
+      res.status(500).send('Error Server');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
 app.get('/projects/:id', (req, res) => {
   const projectsId = req.params.id;
   connection.query('SELECT * FROM projects WHERE id = ?', [projectsId], (err, results) => {
@@ -38,6 +49,17 @@ app.get('/languages', (req, res) => {
   connection.query('SELECT * FROM languages', (err, results) => {
     if (err) {
       res.status(500).send('Error server');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+app.post('/languages', (req, res) => {
+  const language = req.body;
+  connection.query('INSERT INTO languages SET ?', language, (err, results) => {
+    if (err) {
+      res.status(500).send('Error Server');
     } else {
       res.json(results);
     }
