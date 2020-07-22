@@ -4,7 +4,7 @@ CREATE DATABASE portfolio;
 
 USE portfolio;
 
-CREATE TABLE project(
+CREATE TABLE projects(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(30) NULL,
   date VARCHAR(30) NULL,
@@ -18,6 +18,6 @@ CREATE TABLE languages (
   name VARCHAR(30) NULL
 );
 
-INSERT INTO project (name, date, link, image, description) VALUES ('Book Of Wilders', 'Avril 2020', 'https://malikh88.github.io/wilder_book/', 'WilderBook.png', 'Projet 1 de la Wild Code School présentant les étudiants de la promo Mars 2020 de la WCS de Reims');
+INSERT INTO projects (name, date, link, image, description) VALUES ('Book Of Wilders', 'Avril 2020', 'https://malikh88.github.io/wilder_book/', 'WilderBook.png', 'Projet 1 de la Wild Code School présentant les étudiants de la promo Mars 2020 de la WCS de Reims');
 
 INSERT INTO languages (name) VALUES ('HTML');
