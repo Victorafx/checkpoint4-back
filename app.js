@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 const connection = require('./conf');
+
+const cors = require('cors');
+app.use(cors());
+
 const { json } = require('express');
 app.use(express.json());
 app.use(express.urlencoded({
